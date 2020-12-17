@@ -51,11 +51,18 @@ function cekdekrip(){
         let words="abcdefghijklmnoqrstuvwxyz";
         let enkrip="zyxwvutsrqponmlkjihgfedcba";
         let enkripword="";
+        let temp="";
         let dekrip="";
         let modulus=inputkey%25;
-        for(let i=0; i<inputtext.length; i+=2){
-            dekrip+=inputtext[i];
+        for(let i=0; i<inputtext.length; i++){
+            if(inputkey[i]!=' '){
+                temp+=inputtext[i].toLowerCase();
+            }
         }
+        for(let i=0; i<temp.length; i+=2){
+            dekrip+=inputtext[i].toLowerCase();
+        }
+        console.log(dekrip);
         for(let i=0; i<26; i++){
             if(modulus<25){
                 enkripword+=enkrip[modulus];
@@ -65,8 +72,9 @@ function cekdekrip(){
                 modulus=0;
             }
         }
+        console.log(enkripword);
         for(let i=0; i<dekrip.length; i++){
-            if(inputtext[i]==' '){
+            if(dekrip[i]==' '){
                 hasil+=' ';
             }else{
                 for(let j=0; j<enkripword.length; j++){
@@ -85,18 +93,19 @@ function cekType(huruf){
     let hasil;
     for(let i=0; i<huruf.length; i++){
         hasil=false;
-        for(let j=0; j<alfa.length; j++){
-            if(huruf[i].toLowerCase()==alfa[j]){
-                hasil=true;
-                break;
+        if(huruf[i]!=' '){
+            for(let j=0; j<alfa.length; j++){
+                if(huruf[i].toLowerCase()==alfa[j]){
+                    hasil=true;
+                    break;
+                }
             }
-        }
-        if(hasil!=true){
-            hasil=false;
-            break;
+            if(hasil!=true){
+                hasil=false;
+                break;
+            }            
         }
     }
-
     return hasil;
 }
 
