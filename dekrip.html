@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col col-1">
+                <h1>WELCOME TO ENDEKRIP</h1>
+                <h2>Decryption</h2>
+            </div>
+        </div>
+        <div class="row enkrip">
+            <form action="#">
+                <label for="dekriptext">Dekrip</label>
+                <input type="text" name="dekrip" id="dekriptext" placeholder="string">
+                <label for="dekripkey">Key</label>
+                <input type="number" name="dekrip" id="dekripkey" placeholder="number" min="0">
+            </form>
+            <br>
+            <button id="press" onclick="cekdekrip()">Dekrip me</button>
+        </div>
+        <div class="row hide" id="hide">
+            <p><i>Must be string-alfabet and key number</i></p>
+        </div>
+        <br>
+        <br>
+        <div class="row hasil">
+            <form action="#">
+                <label for="hasildekrip">Hasil Dekrip</label><br>
+                <input type="text" name="dekrip" id="hasildekrip">
+            </form>
+        </div>
+        <div class="row">
+            <br>
+            <button onClick="window.location.reload();">Test again ?</button>
+        </div>
+        <div class="row navigation">
+            <div class="col col-2">
+                <a href="enkrip.html">Enkrip</a>
+            </div>
+            <div class="col col-2">
+                <a href="dekrip.html">Dekrip</a>
+            </div>
+        </div>
+        <div class="row mainmenu">
+            <h2><a href="index.html">Back to main menu</a></h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
