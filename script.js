@@ -23,6 +23,7 @@ function cekenkrip(){
                 modulus=0;
             }
         }
+
         for(let i=0; i<inputtext.length; i++){
             if(inputtext[i]==' '){
                 hasil+=' ';
